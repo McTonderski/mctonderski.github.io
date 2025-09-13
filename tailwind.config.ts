@@ -47,6 +47,18 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        romantic: {
+          DEFAULT: "hsl(var(--romantic))",
+          foreground: "hsl(var(--romantic-foreground))",
+        },
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          foreground: "hsl(var(--gold-foreground))",
+        },
+        sage: {
+          DEFAULT: "hsl(var(--sage))",
+          foreground: "hsl(var(--sage-foreground))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -57,6 +69,22 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      fontFamily: {
+        serif: ["var(--font-serif)", "serif"],
+        elegant: ["var(--font-elegant)", "sans-serif"],
+      },
+      backgroundImage: {
+        "gradient-romantic": "var(--gradient-romantic)",
+        "gradient-gold": "var(--gradient-gold)",
+        "gradient-hero": "var(--gradient-hero)",
+      },
+      boxShadow: {
+        soft: "var(--shadow-soft)",
+        romantic: "var(--shadow-romantic)",
+      },
+      transitionTimingFunction: {
+        romantic: "var(--transition-romantic)",
       },
       borderRadius: {
         lg: "var(--radius)",
