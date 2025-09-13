@@ -21,7 +21,7 @@ const WeddingTimeline = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-gradient-romantic">
+    <section className="py-20 px-4 bg-gradient-nautical">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -34,14 +34,14 @@ const WeddingTimeline = () => {
           {events.map((event, index) => (
             <div 
               key={index}
-              className="bg-card border border-romantic rounded-2xl p-8 shadow-soft hover:shadow-romantic transition-all duration-300 hover:-translate-y-1"
+              className="bg-card border border-nautical rounded-2xl p-8 shadow-soft hover:shadow-nautical transition-all duration-300 hover:-translate-y-1"
             >
               <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
                 <div className="flex items-center gap-4">
                   <div className="bg-gradient-hero p-3 rounded-full shadow-soft">
                     <event.icon className="w-6 h-6 text-primary-foreground" />
                   </div>
-                  <div className="bg-gold text-gold-foreground px-4 py-2 rounded-full font-semibold shadow-soft">
+                  <div className="bg-ocean text-ocean-foreground px-4 py-2 rounded-full font-semibold shadow-soft">
                     {event.time}
                   </div>
                 </div>
@@ -53,7 +53,7 @@ const WeddingTimeline = () => {
                   <p className="text-muted-foreground mb-3">
                     {event.description}
                   </p>
-                  <div className="flex items-center gap-2 text-romantic-foreground">
+                  <div className="flex items-center gap-2 text-nautical-foreground">
                     <MapPin className="w-4 h-4" />
                     <span className="font-medium">{event.location}</span>
                     <span className="text-muted-foreground">• {event.address}</span>

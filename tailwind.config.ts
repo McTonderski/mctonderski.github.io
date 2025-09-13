@@ -47,17 +47,17 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        romantic: {
-          DEFAULT: "hsl(var(--romantic))",
-          foreground: "hsl(var(--romantic-foreground))",
+        nautical: {
+          DEFAULT: "hsl(var(--nautical))",
+          foreground: "hsl(var(--nautical-foreground))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          foreground: "hsl(var(--gold-foreground))",
+        ocean: {
+          DEFAULT: "hsl(var(--ocean))",
+          foreground: "hsl(var(--ocean-foreground))",
         },
-        sage: {
-          DEFAULT: "hsl(var(--sage))",
-          foreground: "hsl(var(--sage-foreground))",
+        coral: {
+          DEFAULT: "hsl(var(--coral))",
+          foreground: "hsl(var(--coral-foreground))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -75,13 +75,14 @@ export default {
         elegant: ["var(--font-elegant)", "sans-serif"],
       },
       backgroundImage: {
-        "gradient-romantic": "var(--gradient-romantic)",
-        "gradient-gold": "var(--gradient-gold)",
+        "gradient-nautical": "var(--gradient-nautical)",
+        "gradient-ocean": "var(--gradient-ocean)",
         "gradient-hero": "var(--gradient-hero)",
+        "gradient-coral": "var(--gradient-coral)",
       },
       boxShadow: {
         soft: "var(--shadow-soft)",
-        romantic: "var(--shadow-romantic)",
+        nautical: "var(--shadow-nautical)",
       },
       transitionTimingFunction: {
         romantic: "var(--transition-romantic)",

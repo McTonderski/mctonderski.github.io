@@ -8,52 +8,53 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 35 20% 98%;
-    --foreground: 25 15% 25%;
+    --background: 210 50% 98%;
+    --foreground: 210 30% 20%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 25 15% 25%;
+    --card: 210 45% 99%;
+    --card-foreground: 210 30% 20%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 25 15% 25%;
+    --popover: 210 45% 99%;
+    --popover-foreground: 210 30% 20%;
 
-    --primary: 350 45% 60%;
+    --primary: 200 85% 55%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 35 25% 90%;
-    --secondary-foreground: 25 15% 35%;
+    --secondary: 210 35% 92%;
+    --secondary-foreground: 210 25% 35%;
 
-    --muted: 35 15% 95%;
-    --muted-foreground: 25 10% 55%;
+    --muted: 210 25% 95%;
+    --muted-foreground: 210 15% 55%;
 
-    --accent: 45 60% 85%;
-    --accent-foreground: 25 25% 25%;
+    --accent: 180 60% 85%;
+    --accent-foreground: 210 25% 25%;
 
-    --romantic: 350 50% 92%;
-    --romantic-foreground: 350 30% 40%;
+    --nautical: 200 40% 90%;
+    --nautical-foreground: 200 50% 30%;
 
-    --gold: 45 85% 70%;
-    --gold-foreground: 25 25% 15%;
+    --ocean: 195 85% 60%;
+    --ocean-foreground: 0 0% 98%;
 
-    --sage: 120 25% 75%;
-    --sage-foreground: 120 20% 25%;
+    --coral: 15 80% 75%;
+    --coral-foreground: 15 30% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 35 20% 88%;
-    --input: 35 20% 88%;
-    --ring: 350 45% 60%;
+    --border: 210 25% 88%;
+    --input: 210 25% 88%;
+    --ring: 200 85% 55%;
 
     --radius: 0.75rem;
 
-    /* Wedding-specific design tokens */
-    --gradient-romantic: linear-gradient(135deg, hsl(350 50% 92%), hsl(35 25% 95%));
-    --gradient-gold: linear-gradient(135deg, hsl(45 85% 70%), hsl(45 70% 80%));
-    --gradient-hero: linear-gradient(135deg, hsl(350 45% 60%), hsl(45 60% 70%));
+    /* Yacht and floral design tokens */
+    --gradient-nautical: linear-gradient(135deg, hsl(200 40% 90%), hsl(210 25% 95%));
+    --gradient-ocean: linear-gradient(135deg, hsl(195 85% 60%), hsl(200 70% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(200 85% 55%), hsl(195 70% 65%));
+    --gradient-coral: linear-gradient(135deg, hsl(15 80% 75%), hsl(25 70% 80%));
     
-    --shadow-soft: 0 4px 20px -8px hsl(350 30% 40% / 0.15);
-    --shadow-romantic: 0 8px 30px -12px hsl(350 45% 60% / 0.2);
+    --shadow-soft: 0 4px 20px -8px hsl(200 40% 40% / 0.15);
+    --shadow-nautical: 0 8px 30px -12px hsl(200 85% 55% / 0.2);
     
     --font-serif: 'Playfair Display', serif;
     --font-elegant: 'Inter', sans-serif;
