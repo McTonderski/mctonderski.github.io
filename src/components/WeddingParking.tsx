@@ -69,10 +69,6 @@ const WeddingParking = () => {
                       <span className="text-sm">{parking.time}</span>
                     </div>
                     
-                    <div className="flex items-center gap-2 text-nautical-foreground">
-                      <Car className="w-4 h-4" />
-                      <span className="text-sm">{parking.capacity}</span>
-                    </div>
                   </div>
                 </div>
               </div>

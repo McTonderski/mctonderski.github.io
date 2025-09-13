@@ -13,7 +13,7 @@ const WeddingHero = () => {
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <div className="bg-gradient-nautical backdrop-blur-sm border border-ocean shadow-nautical rounded-2xl p-8 md:p-12">
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-6">
-            Patrycja <span className="text-primary">&</span> Maciej
+            Patrycja <span className="text-primary font-elegant text-4xl md:text-6xl lg:text-7xl">oraz</span> Maciej
           </h1>
           
           <div className="w-24 h-0.5 bg-gradient-hero mx-auto mb-8"></div>

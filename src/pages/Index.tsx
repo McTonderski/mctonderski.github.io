@@ -4,6 +4,7 @@ import WeddingGallery from "@/components/WeddingGallery";
 import WeddingLocation from "@/components/WeddingLocation";
 import WeddingAccommodation from "@/components/WeddingAccommodation";
 import WeddingParking from "@/components/WeddingParking";
+import WeddingPhotos from "@/components/WeddingPhotos";
 import WeddingFooter from "@/components/WeddingFooter";
 
 const Index = () => {
@@ -15,6 +16,7 @@ const Index = () => {
       <WeddingLocation />
       <WeddingAccommodation />
       <WeddingParking />
+      <WeddingPhotos />
       <WeddingFooter />
     </main>
   );
