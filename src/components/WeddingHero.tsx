@@ -1,33 +1,16 @@
-import floralPattern from "@/assets/floral-pattern.png";
-import yachtWheel from "@/assets/yacht-wheel.png";
-import windRose from "@/assets/wind-rose.png";
+import weddingBackground from "@/assets/wedding-background.png";
 
 const WeddingHero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-nautical/30 to-coral/20">
-      {/* Floral Pattern Background */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Blended Watercolor Background */}
       <div 
-        className="absolute inset-0 opacity-20"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
         style={{ 
-          backgroundImage: `url(${floralPattern})`,
-          backgroundRepeat: 'repeat',
-          backgroundSize: '400px 300px'
+          backgroundImage: `url(${weddingBackground})`
         }}
       />
-      
-      {/* Yacht Equipment Graphics */}
-      <div className="absolute top-20 left-20 opacity-10 rotate-12 hidden lg:block">
-        <img src={yachtWheel} alt="" className="w-32 h-32" />
-      </div>
-      <div className="absolute bottom-32 right-16 opacity-15 -rotate-12 hidden lg:block">
-        <img src={windRose} alt="" className="w-28 h-28" />
-      </div>
-      <div className="absolute top-1/3 right-20 opacity-8 rotate-45 hidden xl:block">
-        <img src={yachtWheel} alt="" className="w-24 h-24" />
-      </div>
-      <div className="absolute bottom-20 left-1/4 opacity-12 -rotate-6 hidden lg:block">
-        <img src={windRose} alt="" className="w-20 h-20" />
-      </div>
+      <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-transparent to-background/20"></div>
       
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <div className="bg-gradient-nautical backdrop-blur-sm border border-ocean shadow-nautical rounded-2xl p-8 md:p-12">
