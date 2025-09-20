@@ -7,7 +7,6 @@ const WeddingParking = () => {
       location: "Sobolew - Kościół Wszystkich Świętych",
       description: "Parking bezpłatny przy kościele",
       time: "Dostępny podczas ceremonii (15:00-16:00)",
-      capacity: "~30 miejsc",
       type: "free",
       icon: Car
     },
@@ -16,7 +15,6 @@ const WeddingParking = () => {
       location: "Nieznanowice - Kuter Port",
       description: "Główny parking przy miejscu przyjęcia",
       time: "Cały wieczór",
-      capacity: "~80 miejsc",
       type: "venue",
       icon: Car
     }
@@ -37,7 +35,7 @@ const WeddingParking = () => {
 
         <div className="space-y-8">
           {parkingOptions.map((parking, index) => (
-            <div 
+            <div
               key={index}
               className="bg-card border border-nautical rounded-2xl p-8 shadow-soft hover:shadow-nautical transition-all duration-300"
             >
@@ -49,7 +47,7 @@ const WeddingParking = () => {
                     <parking.icon className="w-6 h-6 text-white" />
                   </div>
                 </div>
-                
+
                 <div className="flex-1">
                   <h3 className="font-serif text-2xl font-semibold text-foreground mb-2">
                     {parking.title}
@@ -57,18 +55,18 @@ const WeddingParking = () => {
                   <p className="text-muted-foreground mb-4">
                     {parking.description}
                   </p>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="flex items-center gap-2 text-nautical-foreground">
                       <MapPin className="w-4 h-4" />
                       <span className="text-sm font-medium">{parking.location}</span>
                     </div>
-                    
+
                     <div className="flex items-center gap-2 text-nautical-foreground">
                       <Clock className="w-4 h-4" />
                       <span className="text-sm">{parking.time}</span>
                     </div>
-                    
+
                   </div>
                 </div>
               </div>
@@ -83,7 +81,6 @@ const WeddingParking = () => {
               <h4 className="font-semibold text-ocean mb-2">Ważne informacje</h4>
               <ul className="text-sm text-muted-foreground space-y-1">
                 <li>• Prosimy o zachowanie ostrożności podczas parkowania</li>
-                <li>• W przypadku braku miejsc, dostępne są dodatkowe miejsca przy ulicy</li>
                 <li>• Parking przy Kuter Port jest strzeżony podczas przyjęcia</li>
               </ul>
             </div>

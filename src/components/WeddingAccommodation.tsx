@@ -3,19 +3,11 @@ import { MapPin, Phone, Car, Bed } from "lucide-react";
 const WeddingAccommodation = () => {
   const accommodations = [
     {
-      name: "Hotel Marina",
-      description: "Luksusowy hotel nad jeziorem z pięknym widokiem",
-      address: "ul. Portowa 12, Nieznanowice",
-      phone: "+48 123 456 789",
-      features: ["Widok na jezioro", "Restauracja", "Spa", "Parking"],
-      icon: Bed
-    },
-    {
-      name: "Pensjonat Przystań",
-      description: "Przytulny pensjonat w stylu marynistycznym",
-      address: "ul. Żeglarska 5, Nieznanowice", 
-      phone: "+48 987 654 321",
-      features: ["Śniadanie", "Wi-Fi", "Parking", "Taras widokowy"],
+      name: "Kuter Port Domki",
+      description: "Domki nad Jeziorem",
+      address: "Marszowice 247, 32-420",
+      phone: "+48 694 863 333",
+      features: ["Śniadanko", "Basen", "Relax"],
       icon: Bed
     }
   ];
@@ -35,7 +27,7 @@ const WeddingAccommodation = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {accommodations.map((place, index) => (
-            <div 
+            <div
               key={index}
               className="bg-card border border-nautical rounded-2xl p-8 shadow-soft hover:shadow-nautical transition-all duration-300 hover:-translate-y-1"
             >
@@ -47,17 +39,17 @@ const WeddingAccommodation = () => {
                   {place.name}
                 </h3>
               </div>
-              
+
               <p className="text-muted-foreground mb-4">
                 {place.description}
               </p>
-              
+
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-nautical-foreground">
                   <MapPin className="w-4 h-4 flex-shrink-0" />
                   <span className="text-sm">{place.address}</span>
                 </div>
-                
+
                 <div className="flex items-center gap-3 text-nautical-foreground">
                   <Phone className="w-4 h-4 flex-shrink-0" />
                   <a href={`tel:${place.phone}`} className="text-sm hover:text-primary transition-colors">
@@ -65,11 +57,11 @@ const WeddingAccommodation = () => {
                   </a>
                 </div>
               </div>
-              
+
               <div className="mt-6 pt-6 border-t border-nautical">
                 <div className="flex flex-wrap gap-2">
                   {place.features.map((feature, featureIndex) => (
-                    <span 
+                    <span
                       key={featureIndex}
                       className="bg-coral text-coral-foreground px-3 py-1 rounded-full text-sm font-medium"
                     >

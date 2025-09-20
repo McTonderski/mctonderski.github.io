@@ -7,11 +7,11 @@ const WeddingLocation = () => {
       name: "Kościół Wszystkich Świętych i MB Różańcowej",
       address: "Sobolew",
       time: "15:00",
-      mapUrl: "https://maps.google.com/?q=Kościół+Wszystkich+Świętych+Sobolew",
+      mapUrl: "https://maps.app.goo.gl/cc4JP2Y9FQAJw2yE6",
       icon: "⛪"
     },
     {
-      type: "Przyjęcie weselne", 
+      type: "Przyjęcie weselne",
       name: "Kuter Port",
       address: "Nieznanowice",
       time: "Po ceremonii",
@@ -35,7 +35,7 @@ const WeddingLocation = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {locations.map((location, index) => (
-            <div 
+            <div
               key={index}
               className="bg-gradient-romantic border border-romantic rounded-2xl p-8 shadow-soft hover:shadow-romantic transition-all duration-300 hover:-translate-y-1"
             >
@@ -61,7 +61,7 @@ const WeddingLocation = () => {
                   <p className="text-foreground font-medium">{location.time}</p>
                 </div>
 
-                <a 
+                <a
                   href={location.mapUrl}
                   target="_blank"
                   rel="noopener noreferrer"
