@@ -1,6 +1,7 @@
-import { MapPin, Phone, Car, Bed, Map } from "lucide-react";
+import { MapPin, Phone, Car, Bed, Map, Coffee } from "lucide-react";
 import mapAccess from "@/assets/domki-map-access.jpg";
 import mapArea from "@/assets/domki-map-area.jpg";
+import mapGeneral from "@/assets/domki-map-general.jpg";
 
 const WeddingAccommodation = () => {
   const accommodations = [
@@ -89,7 +90,7 @@ const WeddingAccommodation = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-card border border-nautical rounded-2xl p-4 shadow-soft">
             <h4 className="font-serif text-lg font-semibold text-foreground mb-4 text-center">
               Mapa dojazdu
@@ -111,6 +112,32 @@ const WeddingAccommodation = () => {
               className="w-full h-auto rounded-lg shadow-soft"
             />
           </div>
+          
+          <div className="bg-card border border-nautical rounded-2xl p-4 shadow-soft">
+            <h4 className="font-serif text-lg font-semibold text-foreground mb-4 text-center">
+              Mapa ogólna ośrodka
+            </h4>
+            <img 
+              src={mapGeneral} 
+              alt="Mapa ogólna ośrodka Kuter Port" 
+              className="w-full h-auto rounded-lg shadow-soft"
+            />
+          </div>
+        </div>
+
+        {/* Breakfast Information */}
+        <div className="mt-12 bg-card border border-nautical rounded-2xl p-8 shadow-soft">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="bg-gradient-coral p-3 rounded-full shadow-soft">
+              <Coffee className="w-6 h-6 text-coral-foreground" />
+            </div>
+            <h3 className="font-serif text-2xl font-semibold text-foreground">
+              Informacje o śniadaniach
+            </h3>
+          </div>
+          <p className="font-elegant text-muted-foreground text-center max-w-2xl mx-auto">
+            Śniadania będą dostępne w miejscu oznaczonym jako <strong className="text-foreground">"Rekreacja"</strong> na mapie ogólnej ośrodka, w godzinach <strong className="text-foreground">8:00 - 10:00</strong>.
+          </p>
         </div>
       </div>
     </section>
