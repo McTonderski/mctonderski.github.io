@@ -10,7 +10,8 @@ const WeddingAccommodation = () => {
       description: "Domki nad Jeziorem",
       address: "Marszowice 247, 32-420",
       phone: "+48 694 863 333",
-      features: ["Śniadanko", "Basen", "Relax"],
+      features: ["Śniadanko", "Basen", "Jacuzzi", "Strefa zewnętrzna"],
+      poolInfo: "Basen, jacuzzi oraz strefa zewnętrzna z ciepłą wodą dostępne w godzinach 8:00 - 10:00",
       icon: Bed
     }
   ];
@@ -62,7 +63,7 @@ const WeddingAccommodation = () => {
               </div>
 
               <div className="mt-6 pt-6 border-t border-nautical">
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {place.features.map((feature, featureIndex) => (
                     <span
                       key={featureIndex}
@@ -72,6 +73,14 @@ const WeddingAccommodation = () => {
                     </span>
                   ))}
                 </div>
+                
+                {place.poolInfo && (
+                  <div className="mt-4 pt-4 border-t border-nautical">
+                    <p className="text-sm text-muted-foreground">
+                      <strong className="text-foreground">🏊‍♀️ Strefa SPA:</strong> {place.poolInfo}
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           ))}
