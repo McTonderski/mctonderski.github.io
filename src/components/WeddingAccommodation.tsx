@@ -1,4 +1,6 @@
-import { MapPin, Phone, Car, Bed } from "lucide-react";
+import { MapPin, Phone, Car, Bed, Map } from "lucide-react";
+import mapAccess from "@/assets/domki-map-access.jpg";
+import mapArea from "@/assets/domki-map-area.jpg";
 
 const WeddingAccommodation = () => {
   const accommodations = [
@@ -25,11 +27,11 @@ const WeddingAccommodation = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="flex justify-center mb-12">
           {accommodations.map((place, index) => (
             <div
               key={index}
-              className="bg-card border border-nautical rounded-2xl p-8 shadow-soft hover:shadow-nautical transition-all duration-300 hover:-translate-y-1"
+              className="bg-card border border-nautical rounded-2xl p-8 shadow-soft hover:shadow-nautical transition-all duration-300 hover:-translate-y-1 max-w-md w-full"
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="bg-gradient-ocean p-3 rounded-full shadow-soft">
@@ -72,6 +74,43 @@ const WeddingAccommodation = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Maps Section */}
+        <div className="text-center mb-8">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <Map className="w-6 h-6 text-primary" />
+            <h3 className="font-serif text-2xl font-semibold text-foreground">
+              Mapy terenu
+            </h3>
+          </div>
+          <p className="font-elegant text-muted-foreground mb-8 max-w-md mx-auto">
+            Mapy pomocne w znalezieniu miejsca noclegu na terenie ośrodka
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-card border border-nautical rounded-2xl p-4 shadow-soft">
+            <h4 className="font-serif text-lg font-semibold text-foreground mb-4 text-center">
+              Mapa dojazdu
+            </h4>
+            <img 
+              src={mapAccess} 
+              alt="Mapa dojazdu do domków Kuter Port" 
+              className="w-full h-auto rounded-lg shadow-soft"
+            />
+          </div>
+          
+          <div className="bg-card border border-nautical rounded-2xl p-4 shadow-soft">
+            <h4 className="font-serif text-lg font-semibold text-foreground mb-4 text-center">
+              Mapa strefy domków
+            </h4>
+            <img 
+              src={mapArea} 
+              alt="Mapa strefy domków Kuter Port z numeracją" 
+              className="w-full h-auto rounded-lg shadow-soft"
+            />
+          </div>
         </div>
       </div>
     </section>
