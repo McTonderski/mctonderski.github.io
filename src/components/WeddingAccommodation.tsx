@@ -1,9 +1,13 @@
-import { MapPin, Phone, Car, Bed, Map, Coffee } from "lucide-react";
+import { MapPin, Phone, Car, Bed, Map, Coffee, X } from "lucide-react";
+import { useState } from "react";
+import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog";
 import mapAccess from "@/assets/domki-map-access.jpg";
 import mapArea from "@/assets/domki-map-area.jpg";
 import mapGeneral from "@/assets/domki-map-general.jpg";
 
 const WeddingAccommodation = () => {
+  const [selectedMap, setSelectedMap] = useState<{ src: string; alt: string; title: string } | null>(null);
+  
   const accommodations = [
     {
       name: "Kuter Port Domki",
@@ -107,7 +111,12 @@ const WeddingAccommodation = () => {
             <img 
               src={mapAccess} 
               alt="Mapa dojazdu do domków Kuter Port" 
-              className="w-full h-auto rounded-lg shadow-soft"
+              className="w-full h-auto rounded-lg shadow-soft cursor-pointer hover:opacity-80 transition-opacity"
+              onClick={() => setSelectedMap({ 
+                src: mapAccess, 
+                alt: "Mapa dojazdu do domków Kuter Port",
+                title: "Mapa dojazdu"
+              })}
             />
           </div>
           
@@ -118,7 +127,12 @@ const WeddingAccommodation = () => {
             <img 
               src={mapArea} 
               alt="Mapa strefy domków Kuter Port z numeracją" 
-              className="w-full h-auto rounded-lg shadow-soft"
+              className="w-full h-auto rounded-lg shadow-soft cursor-pointer hover:opacity-80 transition-opacity"
+              onClick={() => setSelectedMap({ 
+                src: mapArea, 
+                alt: "Mapa strefy domków Kuter Port z numeracją",
+                title: "Mapa strefy domków"
+              })}
             />
           </div>
           
@@ -129,7 +143,12 @@ const WeddingAccommodation = () => {
             <img 
               src={mapGeneral} 
               alt="Mapa ogólna ośrodka Kuter Port" 
-              className="w-full h-auto rounded-lg shadow-soft"
+              className="w-full h-auto rounded-lg shadow-soft cursor-pointer hover:opacity-80 transition-opacity"
+              onClick={() => setSelectedMap({ 
+                src: mapGeneral, 
+                alt: "Mapa ogólna ośrodka Kuter Port",
+                title: "Mapa ogólna ośrodka"
+              })}
             />
           </div>
         </div>
@@ -149,6 +168,32 @@ const WeddingAccommodation = () => {
           </p>
         </div>
       </div>
+
+      {/* Full Screen Map Dialog */}
+      <Dialog open={!!selectedMap} onOpenChange={() => setSelectedMap(null)}>
+        <DialogContent className="max-w-7xl w-full h-full max-h-[90vh] p-0 bg-background border-nautical">
+          <DialogClose className="absolute right-4 top-4 z-50 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground bg-card p-2 shadow-soft">
+            <X className="h-4 w-4" />
+            <span className="sr-only">Close</span>
+          </DialogClose>
+          {selectedMap && (
+            <div className="w-full h-full flex flex-col">
+              <div className="p-6 border-b border-nautical">
+                <h3 className="font-serif text-2xl font-semibold text-foreground text-center">
+                  {selectedMap.title}
+                </h3>
+              </div>
+              <div className="flex-1 flex items-center justify-center p-6 overflow-hidden">
+                <img 
+                  src={selectedMap.src} 
+                  alt={selectedMap.alt}
+                  className="max-w-full max-h-full object-contain rounded-lg shadow-soft"
+                />
+              </div>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
